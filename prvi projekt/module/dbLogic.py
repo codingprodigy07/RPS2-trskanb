@@ -24,9 +24,10 @@ def insertData(visina,teza,itm):
     try:
         mydb = dbConfig.dbConnect()
         cursor = mydb.cursor()
-        mydb.execute(sql)
+        cursor.execute(sql)
+        mydb.commit()
         vrniID = cursor.lastrowid
-        return True
+        return vrniID
     except:
         return -1
     finally:

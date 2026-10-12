@@ -35,6 +35,13 @@ def izracunaj_itm(visinaCm, teza):
     itm = teza / (visinaCm/100) ** 2
     return itm
 
+@app.route("/dnevnik", methods = ["GET", "POST"])
+def dnevnik():
+    data = {}
+
+    data["seznam"] = dbLogic.getAll()
+
+    return render_template("dnevnik.html", podatki = data)
 
 app.config["DEBUG"] = True
 app.run(host = APP_ADDRESS, port = APP_PORT)
