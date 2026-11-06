@@ -2,7 +2,7 @@
 -- Strežnik:                     127.0.0.1
 -- Verzija strežnika:            10.4.24-MariaDB - mariadb.org binary distribution
 -- Operacijski sistem strežnika: Win64
--- HeidiSQL Različica:           12.18.0.7304
+-- HeidiSQL Različica:           12.11.0.7065
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,19 +17,19 @@
 
 -- Dumping database structure for itm
 DROP DATABASE IF EXISTS `itm`;
-CREATE DATABASE IF NOT EXISTS `itm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE IF NOT EXISTS `itm` /*!40100 DEFAULT CHARACTER SET utf16 */;
 USE `itm`;
 
 -- Dumping structure for tabela itm.dnevnik
 DROP TABLE IF EXISTS `dnevnik`;
 CREATE TABLE IF NOT EXISTS `dnevnik` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `datumCas` datetime DEFAULT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DatumCas` datetime DEFAULT NULL,
   `visina` float DEFAULT NULL,
   `teza` float DEFAULT NULL,
   `itm` float DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 -- Dumping data for table itm.dnevnik: ~0 rows (približno)
 
