@@ -53,6 +53,13 @@ def dnevnik_izbirsi(sID):
     # OBVETNO POSKRBI DA JE ZGORAJ NAPISAN IMPORT in KONSTANTA
     return redirect(URL_DNEVNIK)
 
+@app.route("/arhiviraj/<aID>")
+def dnevnik_arhiviraj(aID):
+    id = int(aID)
+    dbLogic.arhivirajItm(ID)
+    return redirect(URL_DNEVNIK)
+
+
 def izracunaj_itm(visinaCm, tezaKg):
     itm = tezaKg / (visinaCm/100) ** 2
     return itm

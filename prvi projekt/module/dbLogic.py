@@ -64,3 +64,9 @@ def deleteItm(id):
     finally:
         cursor.close()
         mydb.close()
+def archiveItm(id):
+    sql = """
+    update dnevnik
+        set isDeleted = 1
+        where id = {}
+""".format(id)
